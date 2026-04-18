@@ -1,0 +1,23 @@
+[package]
+name = "turboquant"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "_turboquant"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["extension-module", "abi3-py39"] }
+numpy = "0.21"
+ndarray = "0.15"
+rayon = "1.10"
+anyhow = "1.0"
+thiserror = "1.0"
+half = { version = "2.4", features = ["num-traits"] }
+num-traits = "0.2"
+rand = "0.8"
+rand_distr = "0.4"
+
+[dev-dependencies]
+approx = "0.5"
